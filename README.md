@@ -61,26 +61,18 @@ ThisSPARQL** queries against an ontology file (e.g., `.rdf`).
 -   An **OpenAI API key** set as an environment variable (`OPENAI_API_KEY`).
 -   Dependencies listed in `requirements.txt`.
 
-## Usage
+## if Structure
 
-## Project # Load/create store first
-
-# results = vector_manager.search_similar_documents("example query")
-# uri, name = rdf_retriever.find_person_uri("Question about Jinwon Jeong")
-# if Structure
-
+~~~plaintext
 vector-ontology-by-backend-RAG/
 ├── vectorbyRAG/
-│   ├── document_processor.py    # Processes and chunks documents
 │   ├── vector_store_manager.py  # Manages vector operations
 │   ├── config.py                # Configuration settings
 ├── ontologybyRAG/
 │   ├── rdf_retriever.py         # Handles RDF-based retrieval
 │   ├── llm_handler.py           # Manages LLM interactions
-│   ├── 04-23-Last_noAb.rdf      # Example Ontology file
 ├── app.py                       # Entry point for the application
-├── requirements.
-└── ...
+~~~
 
 ## License
 
