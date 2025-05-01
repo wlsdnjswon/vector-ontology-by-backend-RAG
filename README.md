@@ -1,10 +1,8 @@
-# Vector Ontology by Backend RAG
-
 ## Overview
 
-The **Vector Ontology by Backend RAG** repository provides the backend API framework for an advanced RAG (Retrieval-Augmented Generation) system. It combines structured knowledge from an ontology (RDF graph via SPARQL) and unstructured information from documents (vector embeddings via ChromaDB) to generate context-rich responses using Large Language Models (LLMs).
+The **Vector Ontology by Backend RAG** repository provides a powerful framework for managing, searching, and utilizing vector-based embeddings and ontological data for advanced applications, such as natural language processing and semantic search. The system integrates components like ChromaDB for vector storage and SPARQL-based RDF retrieval to handle ontological relationships.
 
-This backend powers the interactive chatbot, enabling hybrid searches that leverage both semantic similarity and defined ontological relationships.
+This solution is ideal for building hybrid systems leveraging large language models (LLMs) and structured knowledge representations.
 
 **Experience the chatbot powered by this backend:**
 
@@ -14,66 +12,94 @@ This backend powers the interactive chatbot, enabling hybrid searches that lever
 
 ## Features
 
-### 1. Vector Store Management (vectorbyRAG)
-- Uses **ChromaDB** for efficient storage and retrieval of vector embeddings from documents.
-- Supports loading documents (e.g., PDFs```markdown
-# Vector Ontology by Backend RAG
-
-## Overview
-
-The **Vector Ontology by Backend RAG** repository provides a powerful), processing them, and performing similarity searches based on user queries.
-- Provides utilities for formatting retrieved document snippets for LLM context.
-
-### 2. Ontology-based Retrieval (ontologybyRAG)
-- Implements RDF data retrieval using ** framework for managing, searching, and utilizing vector-based embeddings and ontological data for advanced applications, such as natural language processing and semantic search. The system integrates components like ChromaDB for vector storage and SPARQL-based RDF retrieval to handle ontological relationships.
-
-ThisSPARQL** queries against an ontology file (e.g., `.rdf`).
-- Identifies relevant entities (like people) in user queries and retrieves their properties and relationships from the knowledge graph.
-- Formats structured ontological information for LL solution serves as the **backend API** for hybrid systems leveraging large language models (LLMs) and structured knowledge representations. It is designedM context.
----
-
-## Features
-
 ### 1. Vector Store Management
--   Uses **Chroma coherent interactions.
+- Uses **ChromaDB** for managing vector embeddings.
+- Supports operations like creating or loading vector stores and performing similarity searches.
+- Provides utilities for formatting retrieved documents for LLM context.
 
-### 4. Flask API Server (`app.py`)
-- Provides a `/chat` APIDB** for managing vector embeddings derived from documents.
--   Supports creating/loading vector stores and performing similarity searches based on user queries.
--   Provides utilities for formatting retrieved document snippets for LLM context.
+### 2. Ontology-based Retrieval
+- Implements RDF-based data retrieval using SPARQL queries.
+- Facilitates relationship discovery and structured information extraction.
 
-### 2. Ontology endpoint to receive user messages and return generated responses.
-- Handles system initialization, request processing, and error management.
-- Includes-based Retrieval
--   Implements RDF-based data retrieval from an ontology graph using SPARQL queries.
-- CORS configuration for cross-origin requests from the frontend.
+
+### 3. LLM Integration
+- Integrates with OpenAI's API to generate responses and manage conversations.
+- Supports hybrid search combining vector similarity and ontological relationships.
 
 ---
 
 ## Installation
 
 ### Prerequisites
--   Python 3.8
+- Python 3.8+
+- OpenAI API key for LLM integration.
+- Dependencies listed in `requirements.txt`.
 
-3.  **(Optional but Recommended) Create and activate a virtual environment:**
-    ```bash
-    python -m venv+
--   An **OpenAI API key** set as an environment variable (`OPENAI_API_KEY`).
--   Dependencies listed in `requirements.txt`.
+### Steps
 
-## if Structure
+1. **Clone the repository:**
+   ~~~bash
+   git clone https://github.com/wlsdnjswon/vector-ontology-by-backend-RAG.git
+   ~~~
 
+2. **Navigate to the project directory:**
+   ~~~bash
+   cd vector-ontology-by-backend-RAG
+   ~~~
+
+3. **Install the required dependencies:**
+   ~~~bash
+   pip install -r requirements.txt
+   ~~~
+
+---
+
+## Usage
+
+### Starting the System
+1. **Configure the settings in `config.py`:**
+   - Set the root folder path for RDF and document files.
+   - Specify ChromaDB parameters and collection names.
+2. **Run the main application:**
+   ~~~bash
+   python app.py
+   ~~~
+
+### Example Queries
+- **Perform a vector search:**
+   ~~~python
+   vector_manager.search_similar_documents("example query")
+   ~~~
+
+- **Retrieve structured RDF data for a specific URI:**
+   ~~~python
+   rdf_retriever.get_all_related_info(person_uri)
+   ~~~
+---
+## Project Structure
 ~~~plaintext
 vector-ontology-by-backend-RAG/
 ├── vectorbyRAG/
+│   ├── document_processor.py    # Processes and chunks documents
 │   ├── vector_store_manager.py  # Manages vector operations
 │   ├── config.py                # Configuration settings
 ├── ontologybyRAG/
 │   ├── rdf_retriever.py         # Handles RDF-based retrieval
 │   ├── llm_handler.py           # Manages LLM interactions
+│   ├── 04-23-Last_noAb.rdf      # Example Ontology file
 ├── app.py                       # Entry point for the application
+├── requirements.
+└── ...
 ~~~
+
+---
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request with your enhancements.
+
+---
 
 ## License
 
-This project is licensed under the MIT License
+This project is licensed under the MIT License. See the LICENSE file for details.
