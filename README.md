@@ -94,12 +94,6 @@ vector-ontology-by-backend-RAG/
 
 ---
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and create a pull request with your enhancements.
-
----
-
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
