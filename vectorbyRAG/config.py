@@ -3,8 +3,6 @@ import os
 
 # --- 파일 시스템 경로 ---
 # ROOT_FOLDER_PATH: PDF 파일이 있는 루트 폴더 경로 (app.py 기준 상대 경로)
-# 예시: '정진원' 폴더가 app.py와 같은 레벨에 있다면 '정진원'
-# 만약 app.py가 다른 곳에 있다면 절대 경로 사용 권장: os.path.abspath('./정진원')
 ROOT_FOLDER_PATH = './정진원'
 
 # --- ChromaDB 설정 ---
