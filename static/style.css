@@ -1,0 +1,96 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#chatbox {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 70%;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 15px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.bot-message {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+#suggestions {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+#suggestions p {
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.suggestion-btn {
+    background-color: #e7f3ff;
+    border: 1px solid #b3d7ff;
+    color: #0056b3;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.85em;
+}
+
+.suggestion-btn:hover {
+    background-color: #d0e7ff;
+}
+
+#messageForm {
+    display: flex;
+}
+
+#userInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#messageForm button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#messageForm button:hover {
+    background-color: #0056b3;
+}

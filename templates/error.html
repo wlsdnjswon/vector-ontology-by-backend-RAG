@@ -1,0 +1,15 @@
+<!-- templates/error.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>시스템 오류</title>
+    <style> body { font-family: sans-serif; padding: 20px; } .error { color: red; } </style>
+</head>
+<body>
+    <h1>시스템 오류</h1>
+    <p class="error">서비스를 시작하는 중 문제가 발생했습니다.</p>
+    <p><strong>오류 상세 정보:</strong> {{ error_message }}</p>
+    <p>관리자에게 문의하거나 잠시 후 다시 시도해 주세요.</p>
+</body>
+</html>

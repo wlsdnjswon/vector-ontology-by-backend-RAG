@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontology RAG Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ontology RAG Chat</h1>
+
+    <div id="chatbox">
+        <div class="message bot-message">안녕하세요! 온톨로지 기반 RAG 챗봇입니다. 무엇이 궁금하신가요?</div>
+    </div>
+
+    <div id="suggestions">
+        <p>추천 질문:</p>
+        {% for q in suggestions %}
+            <button class="suggestion-btn">{{ q }}</button>
+        {% endfor %}
+    </div>
+
+    <form id="messageForm">
+        <input type="text" id="userInput" placeholder="메시지를 입력하세요..." autocomplete="off">
+        <button type="submit">전송</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
