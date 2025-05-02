@@ -31,7 +31,7 @@ except ImportError:
     DocumentProcessor = None
     VectorStoreManager = None
     ROOT_FOLDER_PATH = None # 경로 설정도 의미 없음
-    SEARCH_K = 3 # 기본값
+    SEARCH_K = 5 # 기본값
 
 # --- OpenAiHandler 클래스 정의 (import 실패 시 대체용 또는 llm_handler.py가 없을 경우) ---
 if OpenAiHandler is None:
@@ -57,7 +57,7 @@ if OpenAiHandler is None:
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - [%(levelname)s] - %(name)s - %(message)s')
 logger = logging.getLogger(__name__) # 메인 앱 로거
 
-RDF_FILE = "./ontologybyRAG/04-23-Last_noAb.rdf" # 온톨로지 파일 경로
+RDF_FILE = "./ontologybyRAG/05-02.rdf" # 온톨로지 파일 경로
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 LLM_GENERATION_MODEL = "gpt-4.1-mini-2025-04-14"
 MAX_HISTORY_LENGTH = 10

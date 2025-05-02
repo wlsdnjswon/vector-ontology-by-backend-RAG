@@ -1,0 +1,820 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/wlsdn/ontologies/2025/3/untitled-ontology-4/"
+     xml:base="http://www.semanticweb.org/wlsdn/ontologies/2025/3/untitled-ontology-4/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:researcher-ontology="http://www.example.org/researcher-ontology.owl#">
+    <owl:Ontology rdf:about="http://www.example.org/researcher-ontology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#collaboratedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#collaboratedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#educatedPerson -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#educatedPerson">
+        <owl:inverseOf rdf:resource="http://www.example.org/researcher-ontology.owl#hasEducation"/>
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Education"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasAuthor">
+        <owl:inverseOf rdf:resource="http://www.example.org/researcher-ontology.owl#isAuthorOf"/>
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasCopyrightHolder -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasCopyrightHolder">
+        <owl:inverseOf rdf:resource="http://www.example.org/researcher-ontology.owl#isCopyrightHolderOf"/>
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Copyright"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasEducation -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasEducation">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Education"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasInventor -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasInventor">
+        <owl:inverseOf rdf:resource="http://www.example.org/researcher-ontology.owl#isInventorOf"/>
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Patent"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasRecipient -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasRecipient">
+        <owl:inverseOf rdf:resource="http://www.example.org/researcher-ontology.owl#isRecipientOf"/>
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Award"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasSkill">
+        <owl:inverseOf rdf:resource="http://www.example.org/researcher-ontology.owl#isSkillOf"/>
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#isAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#isAuthorOf">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#isAwardFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#isAwardFor">
+        <owl:inverseOf rdf:resource="http://www.example.org/researcher-ontology.owl#receivedAward"/>
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Award"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Patent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#isCopyrightHolderOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#isCopyrightHolderOf">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Copyright"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#isInventorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#isInventorOf">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Patent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#isRecipientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#isRecipientOf">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Award"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#isSkillOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#isSkillOf">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#receivedAward -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/researcher-ontology.owl#receivedAward">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Patent"/>
+        <rdfs:range rdf:resource="http://www.example.org/researcher-ontology.owl#Award"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasAffiliation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasAffiliation">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasApplicationNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasApplicationNumber">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Patent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasAwardDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasAwardDate">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Award"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasAwardName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasAwardName">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Award"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasAwardingBody -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasAwardingBody">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Award"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasCitations -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasCitations">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasCopyrightNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasCopyrightNumber">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Copyright"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasCopyrightTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasCopyrightTitle">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Copyright"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasDOI -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasDOI">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasDateOfBirth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasDateOfBirth">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasDegree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasDegree">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Education"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasEmail">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasFavoriteFoodName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasFavoriteFoodName"/>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasFavoritePersonName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasFavoritePersonName"/>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasMajor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasMajor">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Education"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasName">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasPatentName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasPatentName">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Patent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasPeriod">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Education"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasPhoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasPhoneNumber">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasProficiency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasProficiency">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasRegistrationNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasRegistrationNumber">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Patent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasSchoolName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasSchoolName">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Education"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasSkillName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasSkillName">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasTitle">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#hasURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/researcher-ontology.owl#hasURL">
+        <rdfs:domain rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Award -->
+
+    <owl:Class rdf:about="http://www.example.org/researcher-ontology.owl#Award"/>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Copyright -->
+
+    <owl:Class rdf:about="http://www.example.org/researcher-ontology.owl#Copyright"/>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Education -->
+
+    <owl:Class rdf:about="http://www.example.org/researcher-ontology.owl#Education"/>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper -->
+
+    <owl:Class rdf:about="http://www.example.org/researcher-ontology.owl#Paper"/>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Patent -->
+
+    <owl:Class rdf:about="http://www.example.org/researcher-ontology.owl#Patent"/>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Person -->
+
+    <owl:Class rdf:about="http://www.example.org/researcher-ontology.owl#Person"/>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Skill -->
+
+    <owl:Class rdf:about="http://www.example.org/researcher-ontology.owl#Skill"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#AI_Modeling_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#AI_Modeling_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>AI Modeling</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Award1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Award1">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Award"/>
+        <researcher-ontology:hasRecipient rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasRecipient rdf:resource="http://www.example.org/researcher-ontology.owl#LeeYelim"/>
+        <researcher-ontology:hasRecipient rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:isAwardFor rdf:resource="http://www.example.org/researcher-ontology.owl#Paper2"/>
+        <researcher-ontology:hasAwardDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-04T00:00:00</researcher-ontology:hasAwardDate>
+        <researcher-ontology:hasAwardName>VTS Seoul Chapter Award</researcher-ontology:hasAwardName>
+        <researcher-ontology:hasAwardingBody>2023 IEEE VTS Asia Pacific
+Wireless Communications Symposium 
+Tainan, Taiwan</researcher-ontology:hasAwardingBody>
+        <researcher-ontology:hasPatentName>시맨틱 분할을 위한 회색조 이미지를 컬러 이미지로 변환하는 방법 및 그 장치</researcher-ontology:hasPatentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Award2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Award2">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Award"/>
+        <researcher-ontology:hasRecipient rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasRecipient rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:isAwardFor rdf:resource="http://www.example.org/researcher-ontology.owl#Paper5"/>
+        <researcher-ontology:hasAwardDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-23T00:00:00</researcher-ontology:hasAwardDate>
+        <researcher-ontology:hasAwardName>우수논문상</researcher-ontology:hasAwardName>
+        <researcher-ontology:hasAwardingBody>한국통신학회</researcher-ontology:hasAwardingBody>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#CSharp_WPF_Winform_MVVM_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#CSharp_WPF_Winform_MVVM_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>C# (WPF, Winfrom, MVVM)</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Cognex_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Cognex_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>Cognex</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Computer_Vision_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Computer_Vision_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>Computer Vision</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Copyright_ObjectIdentificationAlgo -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Copyright_ObjectIdentificationAlgo">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Copyright"/>
+        <researcher-ontology:hasCopyrightHolder rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasCopyrightNumber>C-2022-050615</researcher-ontology:hasCopyrightNumber>
+        <researcher-ontology:hasCopyrightTitle>영상 내 객체 식별 성능 향상을 위한 딥러닝 학습 알고리즘</researcher-ontology:hasCopyrightTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Implement_AI_Algorithm_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Implement_AI_Algorithm_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>Implementation of latest AI paper algorithm</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#InfoProcIndEngCert -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#InfoProcIndEngCert">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>자격증: 정보처리산업기사 (2021)</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#JJW -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#JJW">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Education"/>
+        <researcher-ontology:hasMajor>정보통신공학</researcher-ontology:hasMajor>
+        <researcher-ontology:hasPeriod>2022.03 - 2024.02</researcher-ontology:hasPeriod>
+        <researcher-ontology:hasSchoolName>숭실대학교 대학원 졸업</researcher-ontology:hasSchoolName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#JungJinWon -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#JungJinWon">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <researcher-ontology:hasEducation rdf:resource="http://www.example.org/researcher-ontology.owl#JJW"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#AI_Modeling_Skill"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#CSharp_WPF_Winform_MVVM_Skill"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#Cognex_Skill"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#Computer_Vision_Skill"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#Implement_AI_Algorithm_Skill"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#InfoProcIndEngCert"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#NetworkAdminCertL2"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#OpenCV_Skill"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#PublicAdminCertL3"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#Python_Skill"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#Read_Latest_AI_Papers_Skill"/>
+        <researcher-ontology:hasSkill rdf:resource="http://www.example.org/researcher-ontology.owl#Tensorflow_Skill"/>
+        <researcher-ontology:isAuthorOf rdf:resource="http://www.example.org/researcher-ontology.owl#Paper1"/>
+        <researcher-ontology:hasDateOfBirth>2001.04.11</researcher-ontology:hasDateOfBirth>
+        <researcher-ontology:hasEmail>wlsdnjswon@gmail.com</researcher-ontology:hasEmail>
+        <researcher-ontology:hasFavoriteFoodName>치킨</researcher-ontology:hasFavoriteFoodName>
+        <researcher-ontology:hasFavoritePersonName>이윤재</researcher-ontology:hasFavoritePersonName>
+        <researcher-ontology:hasName>정진원</researcher-ontology:hasName>
+        <researcher-ontology:hasPhoneNumber>010-7352-5435</researcher-ontology:hasPhoneNumber>
+        <researcher-ontology:hasSchoolName>숭실대학교 대학원</researcher-ontology:hasSchoolName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#LeeYelim -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#LeeYelim">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <researcher-ontology:hasName>이예림</researcher-ontology:hasName>
+        <researcher-ontology:hasPatentName>시맨틱 분할을 위한 회색조 이미지를 컬러 이미지로 변환하는 방법 및 그 장치</researcher-ontology:hasPatentName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#NetworkAdminCertL2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#NetworkAdminCertL2">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>자격증: 네트워크관리사 2급 (2021)</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#OpenCV_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#OpenCV_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>OpenCV</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Paper1">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:hasTitle>회색조 영상의 시맨틱 분할을 위한 사전 학습된 딥러닝 모델 확장 기법</researcher-ontology:hasTitle>
+        <researcher-ontology:hasURL>https://doi.org/10.7840/kics.2023.48.1.36</researcher-ontology:hasURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Paper2">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:hasCitations rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</researcher-ontology:hasCitations>
+        <researcher-ontology:hasDOI>10.1109/ICUFN57995.2023.10200474</researcher-ontology:hasDOI>
+        <researcher-ontology:hasTitle>Extended U-Net for Satellite Image Semantic Segmentation</researcher-ontology:hasTitle>
+        <researcher-ontology:hasURL>https://doi.org/10.7840/kics.2023.48.1.36</researcher-ontology:hasURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Paper3">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:hasCitations rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</researcher-ontology:hasCitations>
+        <researcher-ontology:hasDOI>10.1109/APWCS60142.2023.10234033</researcher-ontology:hasDOI>
+        <researcher-ontology:hasTitle>Skip Connection Variant of Modified U-Net Architecture for Satellites Imagery</researcher-ontology:hasTitle>
+        <researcher-ontology:hasURL>https://doi.org/10.1109/APWCS60142.2023.10234033</researcher-ontology:hasURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Paper4">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#LeeYelim"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:hasDOI>10.7840/kics.2023.48.10.1219</researcher-ontology:hasDOI>
+        <researcher-ontology:hasTitle>이중 입력을 이용한 개선된 U-Net 모델 기반 위성 영상의 의미론적 분할</researcher-ontology:hasTitle>
+        <researcher-ontology:hasURL>https://doi.org/10.7840/kics.2023.48.10.1219</researcher-ontology:hasURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Paper5">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:hasDOI>10.7840/kics.2023.48.9.1072</researcher-ontology:hasDOI>
+        <researcher-ontology:hasTitle>위성 영상의 의미론적 분할을 위한 확장된 심층 신경망 연결 모델</researcher-ontology:hasTitle>
+        <researcher-ontology:hasURL>https://doi.org/10.7840/kics.2023.48.9.1072</researcher-ontology:hasURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Paper6">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:hasTitle>전이학습을 통한 회색조 위성 영상의 시멘틱 분할 성능 향상</researcher-ontology:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Paper7">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:hasTitle>SAR 선박 영상의 시멘틱 분할 성능 향상</researcher-ontology:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Paper8">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:hasTitle>SAR 선박 탐지를 위한 의미론적 분할 이중 디코더 모델</researcher-ontology:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Paper9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Paper9">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Paper"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#LeeYelim"/>
+        <researcher-ontology:hasAuthor rdf:resource="http://www.example.org/researcher-ontology.owl#ShinYoan"/>
+        <researcher-ontology:hasTitle>컬러 위성 영상을 위한 다중 계층 연결 모델</researcher-ontology:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Patent_Gray2Color -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Patent_Gray2Color">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Patent"/>
+        <researcher-ontology:hasInventor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasPatentName>시맨틱 분할을 위한 회색조 이미지를 컬러 이미지로 변환하는 방법 및 그 장치</researcher-ontology:hasPatentName>
+        <researcher-ontology:hasRegistrationNumber>10-2580931</researcher-ontology:hasRegistrationNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Patent_SatelliteUNet -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Patent_SatelliteUNet">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Patent"/>
+        <researcher-ontology:hasInventor rdf:resource="http://www.example.org/researcher-ontology.owl#JungJinWon"/>
+        <researcher-ontology:hasPatentName>U-Net을 기반으로 하는 위성영상을 이용한 시맨틱 분할 방법 및 그 장치</researcher-ontology:hasPatentName>
+        <researcher-ontology:hasRegistrationNumber>10-2600165</researcher-ontology:hasRegistrationNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#PublicAdminCertL3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#PublicAdminCertL3">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>자격증: 행정관리사 3급 (2021)</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Python_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Python_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>Python</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Pytorch_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Pytorch_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>Pytorch</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Read_Latest_AI_Papers_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Read_Latest_AI_Papers_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>Read the latest AI papers</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#ShinYoan -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#ShinYoan">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Person"/>
+        <researcher-ontology:isAuthorOf rdf:resource="http://www.example.org/researcher-ontology.owl#Paper1"/>
+        <researcher-ontology:hasName>신요안</researcher-ontology:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/researcher-ontology.owl#Tensorflow_Skill -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/researcher-ontology.owl#Tensorflow_Skill">
+        <rdf:type rdf:resource="http://www.example.org/researcher-ontology.owl#Skill"/>
+        <researcher-ontology:hasSkillName>Tensorflow</researcher-ontology:hasSkillName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -21,4 +21,4 @@ CHUNK_OVERLAP = 70
 
 # --- 검색 설정 ---
 # SEARCH_K: 유사도 검색 시 반환할 문서(청크) 개수
-SEARCH_K = 3
+SEARCH_K = 5
