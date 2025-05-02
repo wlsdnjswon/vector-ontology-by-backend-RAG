@@ -146,6 +146,11 @@ CORS(app)
 # 앱 실행 전에 시스템 초기화
 initialize_hybrid_system()
 
+@app.route('/ping')
+def ping():
+    # --- 서버 상태 확인을 위한 간단한 엔드포인트 ---
+    return jsonify({"status": "ok"})
+
 @app.route("/")
 def index():
     global conversation_history # 페이지 로드 시 대화 기록 초기화
