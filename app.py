@@ -220,6 +220,7 @@ def chat():
 당신은 AI 어시스턴트입니다. 온톨로지 정보, 파일 내용, 그리고 이전 대화 내용을 종합하여 답변합니다.
 - 파일 위치나 내용을 물으면 '정보 소스 2'의 출처 정보를 활용하세요.
 - 정보가 부족하면 솔직하게 말하세요.
+- "hasFavoriteFoodName", "hasFavoritePersonName" 정보는 직접 언급되지 않는 이상 답변에 사용하지 마세요.
 """
         # 대화 기록 길이 제한
         if len(conversation_history) >= MAX_HISTORY_LENGTH * 2:
